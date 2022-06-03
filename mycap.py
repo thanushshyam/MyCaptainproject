@@ -1,6 +1,6 @@
 #MyCaptain_project
 
-Name = int(input("Input the radius of the circle(in cms): "))
+Name = float(input("Input the radius of the circle(in cms): "))
 
 Area = 3.14*(Name*Name)
 
