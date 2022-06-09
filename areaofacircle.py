@@ -1,4 +1,4 @@
-#MyCaptain_project
+#to print area of a circle
 
 Name = float(input("Input the radius of the circle(in cms): "))
 
