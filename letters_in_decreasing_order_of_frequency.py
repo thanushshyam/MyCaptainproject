@@ -1,12 +1,18 @@
-values = input("Please enter a string:")
-def char_frequency(str1):
-    dict = {}
-    for n in str1:
-        keys = dict.keys()
-        if n in keys:
-            dict[n] += 1
-        else:
-            dict[n] = 1
-    return dict
+text = input("enter a string: ")
 
-print(char_frequency(values))
+
+def make_dict(n):
+    dict = {}
+    for letter in n:
+        dict[letter] = 1 + dict.get(letter, 0)
+    return dict
+def frequent_decreasing(text):
+    letters = [letter.lower() for letter in text if letter.isalpha()]
+    dict = make_dict(letters)
+    result = []
+    for key in dict:
+        result.append((dict[key], key))
+    result.sort(reverse=True)
+    for count, letter in result:
+        print (letter,"=",count)
+frequent_decreasing(text)
